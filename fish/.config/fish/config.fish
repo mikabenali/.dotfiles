@@ -12,6 +12,9 @@ alias e "emacs -nw"
 alias ll "eza -l --icons"
 alias lla "eza -la --icons"
 
+alias reload-hyprpaper "kill hyprpaper && hyprpaper &"
+alias reload-waybar "kill waybar && waybar &"
+
 # Init Starship prompt
 starship init fish | source
 
