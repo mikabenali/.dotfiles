@@ -25,7 +25,7 @@
        (corfu +orderless)  ; complete with cap(f), cape and a flying feather!
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       ;;ivy               ; a search engine for love and life
+       ivy               ; a search engine for love and life
        vertico           ; the search engine of the future
 
        :ui
@@ -107,10 +107,6 @@
        ;;tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
-       (setq lsp-go-analyses '((shadow . t)
-                        (simplifycompositelit . :json-false)))
-
-
        :os
        (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
        ;;tty               ; improve the terminal Emacs experience
@@ -138,7 +134,7 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp)         ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
@@ -161,7 +157,7 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
        ;;purescript        ; javascript, but functional
-       ;;python            ; beautiful is better than ugly
+       python            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
@@ -180,14 +176,6 @@
        ;;yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
        ;;
-
-       (use-package lsp-pyright
-                :ensure t
-                :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
-                :hook (python-mode . (lambda ()
-                                        (require 'lsp-pyright)
-                                        (lsp))))  ; or lsp-deferred
-
 
        :email
        ;;(mu4e +org +gmail)
