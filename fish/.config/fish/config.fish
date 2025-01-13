@@ -6,6 +6,7 @@ set -x PATH  "$HOME/.config/emacs/bin" $PATH
 
 alias install "sudo zypper in"
 alias search "zypper search"
+alias remove "sudo zypper remove"
 
 alias :q "exit"
 alias n "nvim"
